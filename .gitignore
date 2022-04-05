@@ -1,7 +1,10 @@
 node_modules
-
+/.vscode
 /.cache
 /build
 /public/build
-.env
-.git
+/.env
+/.git
+
+/prisma/migrations
+/prisma/dev.db
