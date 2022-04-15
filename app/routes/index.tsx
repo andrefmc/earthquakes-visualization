@@ -1,11 +1,8 @@
 import { PrismaClient } from '@prisma/client'
+import { getEarthquakes } from '~/lib/earthquake';
 
-export async function loader() {
-  const prisma = new PrismaClient();
-  const allUsers = await prisma.user.findMany();
-  console.log(allUsers);
-  await prisma.$disconnect();
-  return allUsers;
+export let loader = () => {
+  return getEarthquakes();
 }
 export default function Index() {
 
